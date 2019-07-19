@@ -1,21 +1,17 @@
-package kotlinbootcamp
+package kotlinbootcamp.basicappanatomy
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.kotlinbootcamp.R
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import kotlin.math.absoluteValue
 
-class MainActivity : AppCompatActivity() {
+class BasicAppAnatomyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+        setContentView(R.layout.basic_app_anatomy)
         val rollButton: Button = findViewById(R.id.roll_button)
         val countUpButton: Button = findViewById(R.id.count_up_button)
         val text: TextView = findViewById(R.id.roll_text)

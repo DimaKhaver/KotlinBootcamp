@@ -3,4 +3,6 @@
     <string name="roll_label">Roll</string>
     <string name="dice_rolled">Dice Rolled!</string>
     <string name="count_up">CountUp</string>
+
+    <string name="base_app_anatomy">base app anatomy</string>
 </resources>
