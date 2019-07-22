@@ -18,6 +18,7 @@
         </activity>
 
         <activity android:name="kotlinbootcamp.basicappanatomy.BasicAppAnatomyActivity"/>
+        <activity android:name="kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity"/>
 
     </application>
 
