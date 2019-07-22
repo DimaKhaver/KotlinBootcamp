@@ -16,6 +16,10 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
+    dataBinding {
+        enabled = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -24,6 +28,7 @@ android {
     }
 
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+
 }
 
 dependencies {

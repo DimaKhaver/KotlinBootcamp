@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.kotlinbootcamp">
+          xmlns:tools="http://schemas.android.com/tools" package="com.kotlinbootcamp">
 
     <application
             android:allowBackup="true"
@@ -8,7 +8,7 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme" tools:ignore="AllowBackup">
         <activity android:name="kotlinbootcamp.mainscreen.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,6 +20,8 @@
         <activity android:name="kotlinbootcamp.basicappanatomy.BasicAppAnatomyActivity"/>
         <activity android:name="kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity"/>
         <activity android:name="kotlinbootcamp.constraintlayout.ColorMyViewsActivity"/>
+        <activity android:name="kotlinbootcamp.databinding.BindDataActivity"/>
+
         <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
 
     </application>
