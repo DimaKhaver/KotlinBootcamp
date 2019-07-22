@@ -19,6 +19,8 @@
 
         <activity android:name="kotlinbootcamp.basicappanatomy.BasicAppAnatomyActivity"/>
         <activity android:name="kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity"/>
+        <activity android:name="kotlinbootcamp.constraintlayout.ColorMyViewsActivity"/>
+        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
 
     </application>
 

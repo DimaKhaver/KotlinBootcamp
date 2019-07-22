@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlinbootcamp.R
 import kotlinbootcamp.basicappanatomy.BasicAppAnatomyActivity
+import kotlinbootcamp.constraintlayout.ColorMyViewsActivity
 import kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var rvAdapter: MainAdapter
     private lateinit var rvLayoutManager: LinearLayoutManager
-    private val namesInList: Array<String> = arrayOf("basic app anatomy", "image rsc & compatibility")
+    private val namesInList: Array<String> = arrayOf("basic app anatomy", "image rsc & compatibility", "color my views")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
         when (textVal) {
             this.namesInList[0] -> startNewActivity(this, BasicAppAnatomyActivity::class.java)
             this.namesInList[1] -> startNewActivity(this, ImageResourcesActivity::class.java)
+            this.namesInList[2] -> startNewActivity(this, ColorMyViewsActivity::class.java)
         }
     }
 }
