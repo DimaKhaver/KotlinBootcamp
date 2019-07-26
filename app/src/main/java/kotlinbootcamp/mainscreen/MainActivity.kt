@@ -11,6 +11,7 @@ import kotlinbootcamp.basicappanatomy.BasicAppAnatomyActivity
 import kotlinbootcamp.constraintlayout.ColorMyViewsActivity
 import kotlinbootcamp.databinding.BindDataActivity
 import kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity
+import kotlinbootcamp.lifecycleandlogging.ClickerActivity
 import kotlinbootcamp.navigationpaths.NavigationMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
     private lateinit var rvLayoutManager: LinearLayoutManager
     private val namesInList: Array<String> =
         arrayOf("basic app anatomy", "image rsc & compatibility", "color my views",
-                "data binding", "navigation paths")
+                "data binding", "navigation paths", "clicker app")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
             this.namesInList[2] -> startNewActivity(this, ColorMyViewsActivity::class.java)
             this.namesInList[3] -> startNewActivity(this, BindDataActivity::class.java)
             this.namesInList[4] -> startNewActivity(this, NavigationMainActivity::class.java)
+            this.namesInList[5] -> startNewActivity(this, ClickerActivity::class.java)
         }
     }
 }
