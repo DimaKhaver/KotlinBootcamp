@@ -20,7 +20,6 @@ class ScoreFragment : Fragment() {
     private lateinit var viewModelFactory: ScoreViewModelFactory
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate view and obtain an instance of the binding class.
         val binding: ScoreFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.score_fragment, container, false)
         setUpScoreVM(binding)
         return binding.root

@@ -16,9 +16,6 @@ import com.kotlinbootcamp.R
 import com.kotlinbootcamp.databinding.GameFragmentBinding
 
 
-/**
- * Fragment where the game is played
- */
 class GameFragment : Fragment() {
     private lateinit var binding: GameFragmentBinding
     private lateinit var viewModel: GameViewModel
