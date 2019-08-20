@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package kotlinbootcamp.roomdb.trackmysleepquality.database
+package kotlinbootcamp.coroutinesandroom.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -24,6 +24,7 @@ import androidx.room.Update
 
 @Dao
 interface SleepDatabaseDao {
+
     @Insert
     fun insert(night: SleepNight)
 

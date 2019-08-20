@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package kotlinbootcamp.roomdb.trackmysleepquality.sleepquality
+package kotlinbootcamp.coroutinesandroom.sleepquality
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -24,7 +24,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.kotlinbootcamp.R
 import com.kotlinbootcamp.databinding.FragmentSleepQualityBinding
-
 
 /**
  * Fragment that displays a list of clickable icons,
@@ -44,7 +43,7 @@ class SleepQualityFragment : Fragment() {
 
         // Get a reference to the binding object and inflate the fragment views.
         val binding: FragmentSleepQualityBinding = DataBindingUtil.inflate(
-                inflater, R.layout.fragment_sleep_quality, container, false)
+                inflater, R.layout.fragment_sleep_quality_new, container, false)
 
         val application = requireNotNull(this.activity).application
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package kotlinbootcamp.roomdb.trackmysleepquality.database
+package kotlinbootcamp.coroutinesandroom.database
 
 import android.content.Context
 import androidx.room.Database
@@ -27,12 +27,20 @@ abstract class SleepDatabase : RoomDatabase() {
     abstract val sleepDatabaseDao: SleepDatabaseDao
 
     companion object {
+
+        @Volatile
         private var INSTANCE: SleepDatabase? = null
+
         fun getInstance(context: Context): SleepDatabase {
             synchronized(this) {
                 var instance = INSTANCE
+
                 if (instance == null) {
-                    instance = Room.databaseBuilder(context.applicationContext, SleepDatabase::class.java, "sleep_history_database")
+                    instance = Room.databaseBuilder(
+                        context.applicationContext,
+                        SleepDatabase::class.java,
+                        "sleep_history_database"
+                    )
                         .fallbackToDestructiveMigration()
                         .build()
                     INSTANCE = instance
@@ -41,5 +49,4 @@ abstract class SleepDatabase : RoomDatabase() {
             }
         }
     }
-
 }

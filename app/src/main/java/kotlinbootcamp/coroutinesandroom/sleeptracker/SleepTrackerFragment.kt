@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package kotlinbootcamp.roomdb.trackmysleepquality.sleeptracker
+package kotlinbootcamp.coroutinesandroom.sleeptracker
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,8 +22,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import com.kotlinbootcamp.R
-import com.kotlinbootcamp.databinding.FragmentSleepTrackerBinding
+import com.kotlinbootcamp.databinding.FragmentSleepTrackerNewBinding
+import kotlinbootcamp.coroutinesandroom.database.SleepDatabase
 
 /**
  * A fragment with buttons to record start and end times for sleep, which are saved in
@@ -37,12 +39,17 @@ class SleepTrackerFragment : Fragment() {
      *
      * This function uses DataBindingUtil to inflate R.layout.fragment_sleep_quality.
      */
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Get a reference to the binding object and inflate the fragment views.
-        val binding: FragmentSleepTrackerBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_sleep_tracker, container, false)
+        val binding: FragmentSleepTrackerNewBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_sleep_tracker_new, container, false)
+
+        val application = requireNotNull(this.activity).application
+        val dataSource = SleepDatabase.getInstance(application).sleepDatabaseDao
+        val viewModelFactory = SleepTrackerViewModelFactory(dataSource, application)
+        val sleepTrackerViewModel = ViewModelProviders.of(this, viewModelFactory).get(SleepTrackerViewModel::class.java)
+
+        binding.lifecycleOwner = this
+        binding.sleepTrackerViewModel = sleepTrackerViewModel
 
         return binding.root
     }

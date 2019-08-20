@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package kotlinbootcamp.roomdb.trackmysleepquality.sleeptracker
+package kotlinbootcamp.coroutinesandroom.sleeptracker
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import kotlinbootcamp.roomdb.trackmysleepquality.database.SleepDatabaseDao
+import kotlinbootcamp.coroutinesandroom.database.SleepDatabaseDao
 
 /**
  * This is pretty much boiler plate code for a ViewModel Factory.
@@ -28,8 +28,8 @@ import kotlinbootcamp.roomdb.trackmysleepquality.database.SleepDatabaseDao
  */
 class SleepTrackerViewModelFactory(
     private val dataSource: SleepDatabaseDao,
-
     private val application: Application) : ViewModelProvider.Factory {
+
     @Suppress("unchecked_cast")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(SleepTrackerViewModel::class.java)) {
@@ -38,3 +38,4 @@ class SleepTrackerViewModelFactory(
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }
+
