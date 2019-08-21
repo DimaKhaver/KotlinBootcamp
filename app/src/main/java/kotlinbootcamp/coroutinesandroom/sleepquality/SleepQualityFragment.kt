@@ -22,8 +22,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import com.kotlinbootcamp.R
-import com.kotlinbootcamp.databinding.FragmentSleepQualityBinding
+import com.kotlinbootcamp.databinding.FragmentSleepQualityNewBinding
+import kotlinbootcamp.coroutinesandroom.database.SleepDatabase
 
 /**
  * Fragment that displays a list of clickable icons,
@@ -38,14 +40,18 @@ class SleepQualityFragment : Fragment() {
      *
      * This function uses DataBindingUtil to inflate R.layout.fragment_sleep_quality.
      */
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Get a reference to the binding object and inflate the fragment views.
-        val binding: FragmentSleepQualityBinding = DataBindingUtil.inflate(
+        val binding: FragmentSleepQualityNewBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_sleep_quality_new, container, false)
 
         val application = requireNotNull(this.activity).application
+        val arguments = SleepQualityFragmentArgs.fromBundle(arguments!!)
+        val dataSource = SleepDatabase.getInstance(application).sleepDatabaseDao
+        val viewModelFactory = SleepQualityViewModelFactory(arguments.sleepNightKey, dataSource)
+        val sleepQualityViewModel = ViewModelProviders.of(this, viewModelFactory).get(SleepQualityViewModel::class.java)
+
+        binding.sleepQualityViewModel = sleepQualityViewModel
 
         return binding.root
     }

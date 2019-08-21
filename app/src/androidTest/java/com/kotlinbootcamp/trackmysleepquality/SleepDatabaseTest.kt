@@ -35,9 +35,9 @@ package com.kotlinbootcamp.trackmysleepquality
 import androidx.room.Room
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
-import kotlinbootcamp.roomdb.trackmysleepquality.database.SleepDatabase
-import kotlinbootcamp.roomdb.trackmysleepquality.database.SleepDatabaseDao
-import kotlinbootcamp.roomdb.trackmysleepquality.database.SleepNight
+import kotlinbootcamp.coroutinesandroom.database.SleepDatabase
+import kotlinbootcamp.coroutinesandroom.database.SleepDatabaseDao
+import kotlinbootcamp.coroutinesandroom.database.SleepNight
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
