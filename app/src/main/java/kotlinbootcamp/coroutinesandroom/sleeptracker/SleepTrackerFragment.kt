@@ -25,6 +25,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.kotlinbootcamp.R
 import com.kotlinbootcamp.databinding.FragmentSleepTrackerNewBinding
@@ -50,11 +51,19 @@ class SleepTrackerFragment : Fragment() {
         val viewModelFactory = SleepTrackerViewModelFactory(dataSource, application)
         val sleepTrackerViewModel = ViewModelProviders.of(this, viewModelFactory).get(SleepTrackerViewModel::class.java)
         val adapter = SleepNightAdapter()
+        val gridLayoutManager = GridLayoutManager(activity, 3)
 
         binding.sleepList.adapter = adapter
+        binding.sleepList.layoutManager = gridLayoutManager
         binding.lifecycleOwner = this
         binding.sleepTrackerViewModel = sleepTrackerViewModel
 
+        setUpVMCallbacks(sleepTrackerViewModel, adapter)
+
+        return binding.root
+    }
+
+    private fun setUpVMCallbacks(sleepTrackerViewModel: SleepTrackerViewModel, adapter: SleepNightAdapter) {
         sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.submitList(it)
@@ -74,7 +83,5 @@ class SleepTrackerFragment : Fragment() {
                 sleepTrackerViewModel.doneShowingSnackbar()
             }
         })
-
-        return binding.root
     }
 }
