@@ -17,6 +17,7 @@
 package kotlinbootcamp.coroutinesandroom.sleeptracker
 
 import android.app.Application
+import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -44,6 +45,14 @@ class SleepTrackerViewModel(val database: SleepDatabaseDao, application: Applica
         val showSnackBarEvent: LiveData<Boolean>
                 get() = _showSnackbarEvent
 
+        private val _navigateToSleepDetail = MutableLiveData<Long>()
+        val navigateToSleepDetail
+                get() = _navigateToSleepDetail
+
+        val adapter = SleepNightAdapter(SleepNightListener { nightId ->
+                Toast.makeText(context, "${nightId}", Toast.LENGTH_LONG).show()
+        })
+
 
         init {
             initializeTonight()
@@ -51,6 +60,15 @@ class SleepTrackerViewModel(val database: SleepDatabaseDao, application: Applica
 
         val nightsString = Transformations.map(nights) { nights ->
                 formatNights(nights, application.resources)
+        }
+
+
+        fun onSleepNightClicked(id: Long) {
+                _navigateToSleepDetail.value = id
+        }
+
+        fun onSleepDetailNavigated() {
+                _navigateToSleepDetail.value = null
         }
 
         val startButtonVisible = Transformations.map(tonight) {

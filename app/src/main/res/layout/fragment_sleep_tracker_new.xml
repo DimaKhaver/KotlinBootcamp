@@ -44,9 +44,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/stop_button"
         >
 
-
-
-
         </androidx.recyclerview.widget.RecyclerView>
 
         <Button
