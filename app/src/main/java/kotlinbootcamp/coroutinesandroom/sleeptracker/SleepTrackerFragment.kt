@@ -52,16 +52,17 @@ class SleepTrackerFragment : Fragment() {
         val viewModelFactory = SleepTrackerViewModelFactory(dataSource, application)
         val sleepTrackerViewModel = ViewModelProviders.of(this, viewModelFactory).get(SleepTrackerViewModel::class.java)
         val gridLayoutManager = GridLayoutManager(activity, 3)
+
         val adapter = SleepNightAdapter(SleepNightListener { nightId ->
             Toast.makeText(context, "$nightId", Toast.LENGTH_LONG).show()
         })
 
+        setUpVMCallbacks(sleepTrackerViewModel, adapter)
+
+        binding.sleepTrackerViewModel = sleepTrackerViewModel
         binding.sleepList.adapter = adapter
         binding.sleepList.layoutManager = gridLayoutManager
         binding.lifecycleOwner = this
-        binding.sleepTrackerViewModel = sleepTrackerViewModel
-
-        setUpVMCallbacks(sleepTrackerViewModel, adapter)
 
         return binding.root
     }
@@ -80,6 +81,13 @@ class SleepTrackerFragment : Fragment() {
             }
         })
 
+        sleepTrackerViewModel.navigateToSleepDetail.observe(this, Observer { night ->
+            night?.let {
+                this.findNavController().navigate(SleepTrackerFragmentDirections.actionSleepTrackerFragmentToSleepDetailFragment(night))
+                sleepTrackerViewModel.onSleepDetailNavigated()
+            }
+        })
+
         sleepTrackerViewModel.showSnackBarEvent.observe(this, Observer {
             if (it == true) { // Observed state is true.
                 Snackbar.make(activity!!.findViewById(android.R.id.content), getString(R.string.cleared_message), Snackbar.LENGTH_SHORT).show()
@@ -87,12 +95,5 @@ class SleepTrackerFragment : Fragment() {
             }
         })
 
-        sleepTrackerViewModel.navigateToSleepDetail.observe(this, Observer { night ->
-            night?.let {
-                this.findNavController().navigate(
-                    SleepTrackerFragmentDirections.actionSleepTrackerFragmentToSleepDetailFragment(night))
-                sleepTrackerViewModel.onSleepDetailNavigated()
-            }
-        })
     }
 }

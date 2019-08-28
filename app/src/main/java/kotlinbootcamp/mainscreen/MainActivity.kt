@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kotlinbootcamp.R
 import kotlinbootcamp.basicappanatomy.BasicAppAnatomyActivity
 import kotlinbootcamp.constraintlayout.ColorMyViewsActivity
-import kotlinbootcamp.coroutinesandroom.CoroutinesAndRoomActivity
+import kotlinbootcamp.coroutinesandroom.SleepActivity
 import kotlinbootcamp.databinding.BindDataActivity
 import kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity
 import kotlinbootcamp.lifecycleandlogging.ClickerActivity
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
             this.namesInList[4] -> startNewActivity(this, NavigationMainActivity::class.java)
             this.namesInList[5] -> startNewActivity(this, ClickerActivity::class.java)
             this.namesInList[6] -> startNewActivity(this, GuessTheWordActivity::class.java)
-            this.namesInList[7] -> startNewActivity(this, CoroutinesAndRoomActivity::class.java)
+            this.namesInList[7] -> startNewActivity(this, SleepActivity::class.java)
         }
     }
 }

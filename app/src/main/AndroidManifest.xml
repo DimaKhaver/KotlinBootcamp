@@ -25,8 +25,7 @@
         <activity android:name="kotlinbootcamp.navigationpaths.NavigationMainActivity"/>
         <activity android:name="kotlinbootcamp.lifecycleandlogging.ClickerActivity"/>
         <activity android:name="kotlinbootcamp.viewmodelandviewmodelfactory.GuessTheWordActivity"/>
-        <activity android:name="kotlinbootcamp.roomdb.trackmysleepquality.SleepActivity"/>
-        <activity android:name="kotlinbootcamp.coroutinesandroom.CoroutinesAndRoomActivity"/>
+        <activity android:name="kotlinbootcamp.coroutinesandroom.SleepActivity"/>
 
         <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
 

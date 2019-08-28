@@ -37,6 +37,7 @@ class SleepTrackerViewModel(val database: SleepDatabaseDao, application: Applica
         val nights = database.getAllNights()
 
         private var tonight = MutableLiveData<SleepNight?>()
+
         private val _navigateToSleepQuality = MutableLiveData<SleepNight>()
         val navigateToSleepQuality: LiveData<SleepNight>
                 get() = _navigateToSleepQuality
@@ -46,12 +47,8 @@ class SleepTrackerViewModel(val database: SleepDatabaseDao, application: Applica
                 get() = _showSnackbarEvent
 
         private val _navigateToSleepDetail = MutableLiveData<Long>()
-        val navigateToSleepDetail
+        val navigateToSleepDetail: LiveData<Long>
                 get() = _navigateToSleepDetail
-
-        val adapter = SleepNightAdapter(SleepNightListener { nightId ->
-                Toast.makeText(context, "${nightId}", Toast.LENGTH_LONG).show()
-        })
 
 
         init {

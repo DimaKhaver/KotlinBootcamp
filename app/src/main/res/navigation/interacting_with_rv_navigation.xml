@@ -1,24 +1,23 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/navigation"
+            android:id="@+id/rv_navigation"
             app:startDestination="@id/sleep_tracker_fragment">
 
     <fragment
-            android:id="@+id/sleep_tracker_fragment"
-            android:name="kotlinbootcamp.coroutinesandroom.sleeptracker.SleepTrackerFragment"
-            android:label="@string/sleep_tracker_fragment"
-            tools:layout="@layout/fragment_sleep_tracker_new">
+        android:id="@+id/sleep_tracker_fragment"
+        android:name="kotlinbootcamp.coroutinesandroom.sleeptracker.SleepTrackerFragment"
+        android:label="@string/sleep_tracker_fragment">
         <action
-                android:id="@+id/action_sleepTrackerFragment_to_sleepQualityFragment"
-                app:destination="@id/sleep_quality_fragment"
-                app:enterAnim="@anim/slide_in_right"
-                app:popEnterAnim="@anim/slide_in_right" />
+            android:id="@+id/action_sleepTrackerFragment_to_sleepQualityFragment"
+            app:destination="@id/sleep_quality_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right" />
         <action
-                android:id="@+id/action_sleep_tracker_fragment_to_sleepDetailFragment"
-                app:destination="@id/sleep_detail_fragment"
-                app:enterAnim="@anim/slide_in_right"
-                app:popEnterAnim="@anim/slide_in_right" />
+            android:id="@+id/action_sleepTrackerFragment_to_sleepDetailFragment"
+            app:destination="@id/sleep_detail_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right" />
     </fragment>
 
     <fragment
@@ -40,7 +39,7 @@
     <fragment
             android:id="@+id/sleep_detail_fragment"
             android:name="kotlinbootcamp.coroutinesandroom.sleepdetail.SleepDetailFragment"
-            android:label="fragment_sleep_detail"
+            android:label="@string/sleep_detail_fragment"
             tools:layout="@layout/fragment_sleep_detail" >
         <argument
                 android:name="sleepNightKey"
@@ -53,4 +52,4 @@
                 app:popUpToInclusive="true" />
     </fragment>
 
-</navigation>
+ </navigation>
