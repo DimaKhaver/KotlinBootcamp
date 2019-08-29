@@ -17,8 +17,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{() -> clickListener.onClick(sleep)}"
-    >
+            android:onClick="@{() -> clickListener.onClick(sleep)}">
 
         <ImageView
                 android:id="@+id/quality_image"
@@ -31,8 +30,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@drawable/ic_sleep_5"
-                app:sleepImage="@{sleep}"
-        />
+                app:sleepImage="@{sleep}" />
 
         <TextView
                 android:id="@+id/quality_string"

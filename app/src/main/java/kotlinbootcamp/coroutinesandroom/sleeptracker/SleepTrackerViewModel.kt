@@ -17,7 +17,6 @@
 package kotlinbootcamp.coroutinesandroom.sleeptracker
 
 import android.app.Application
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -99,7 +98,7 @@ class SleepTrackerViewModel(val database: SleepDatabaseDao, application: Applica
                         var night = database.getTonight()
                         if (night?.endTimeMilli != night?.startTimeMilli)
                                 night = null
-                        night
+                        return@withContext night
                 }
         }
 

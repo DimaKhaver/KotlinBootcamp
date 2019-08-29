@@ -53,11 +53,19 @@ class SleepTrackerFragment : Fragment() {
         val sleepTrackerViewModel = ViewModelProviders.of(this, viewModelFactory).get(SleepTrackerViewModel::class.java)
         val gridLayoutManager = GridLayoutManager(activity, 3)
 
+        gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+            override fun getSpanSize(position: Int) = when (position) {
+                0 -> 3
+                else -> 1
+            }
+        }
+
         val adapter = SleepNightAdapter(SleepNightListener { nightId ->
-            Toast.makeText(context, "$nightId", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "nightId = $nightId", Toast.LENGTH_LONG).show()
+            sleepTrackerViewModel.onSleepNightClicked(nightId)
         })
 
-        setUpVMCallbacks(sleepTrackerViewModel, adapter)
+        setUpLiveCallbacks(sleepTrackerViewModel, adapter)
 
         binding.sleepTrackerViewModel = sleepTrackerViewModel
         binding.sleepList.adapter = adapter
@@ -67,10 +75,10 @@ class SleepTrackerFragment : Fragment() {
         return binding.root
     }
 
-    private fun setUpVMCallbacks(sleepTrackerViewModel: SleepTrackerViewModel, adapter: SleepNightAdapter) {
+    private fun setUpLiveCallbacks(sleepTrackerViewModel: SleepTrackerViewModel, adapter: SleepNightAdapter) {
         sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {
             it?.let {
-                adapter.submitList(it)
+                adapter.addHeaderAndSubmitList(it)
             }
         })
 
