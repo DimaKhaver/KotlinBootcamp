@@ -13,6 +13,7 @@ import kotlinbootcamp.coroutinesandroom.SleepActivity
 import kotlinbootcamp.databinding.BindDataActivity
 import kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity
 import kotlinbootcamp.lifecycleandlogging.ClickerActivity
+import kotlinbootcamp.marsrealestate.MarsActivity
 import kotlinbootcamp.navigationpaths.NavigationMainActivity
 import kotlinbootcamp.viewmodelandviewmodelfactory.GuessTheWordActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
     private lateinit var rvLayoutManager: LinearLayoutManager
     private val namesInList: Array<String> =
         arrayOf("basic app anatomy", "image rsc & compatibility", "color my views", "data binding",
-            "navigation paths", "clicker app", "vmandvmfactory", "coroutinesBasics" )
+            "navigation paths", "clicker app", "vm & vm factory", "coroutines basics", "mars real estate" )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
             this.namesInList[5] -> startNewActivity(this, ClickerActivity::class.java)
             this.namesInList[6] -> startNewActivity(this, GuessTheWordActivity::class.java)
             this.namesInList[7] -> startNewActivity(this, SleepActivity::class.java)
+            this.namesInList[8] -> startNewActivity(this, MarsActivity::class.java)
         }
     }
 }
