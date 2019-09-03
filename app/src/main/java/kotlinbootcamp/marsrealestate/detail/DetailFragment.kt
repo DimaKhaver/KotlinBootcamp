@@ -35,7 +35,7 @@ class DetailFragment : Fragment() {
         @Suppress("UNUSED_VARIABLE")
         val application = requireNotNull(activity).application
         val binding: MarsFragmentDetailBinding = DataBindingUtil.inflate(inflater, R.layout.mars_fragment_detail, container, false)
-        binding.setLifecycleOwner(this)
+        binding.lifecycleOwner = this
         return binding.root
     }
 }
