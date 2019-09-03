@@ -38,6 +38,11 @@
         android:name="kotlinbootcamp.marsrealestate.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/mars_fragment_detail">
+
+        <argument
+            android:name="selectedProperty"
+            app:argType="kotlinbootcamp.marsrealestate.network.MarsProperty" />
+
     </fragment>
 
 </navigation>
