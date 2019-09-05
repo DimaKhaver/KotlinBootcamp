@@ -91,22 +91,18 @@ class DevByteFragment : Fragment() {
      *
      * @return Return the View for the fragment's UI.
      */
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding: FragmentDevByteBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_dev_byte, container, false)
 
         binding.lifecycleOwner = viewLifecycleOwner
-
         binding.viewModel = viewModel
 
         viewModelAdapter = DevByteAdapter(VideoClick {
             // When a video is clicked this block or lambda will be called by DevByteAdapter
-
             // context is not around, we can safely discard this click since the Fragment is no
             // longer on the screen
             val packageManager = context?.packageManager ?: return@VideoClick
-
             // Try to generate a direct intent to the YouTube app
             var intent = Intent(Intent.ACTION_VIEW, it.launchUri)
             if(intent.resolveActivity(packageManager) == null) {
@@ -124,7 +120,8 @@ class DevByteFragment : Fragment() {
 
         // Observer for the network error.
         viewModel.eventNetworkError.observe(this, Observer<Boolean> { isNetworkError ->
-            if (isNetworkError) onNetworkError()
+            if (isNetworkError)
+                onNetworkError()
         })
 
         return binding.root
@@ -187,10 +184,7 @@ class DevByteAdapter(val callback: VideoClick) : RecyclerView.Adapter<DevByteVie
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DevByteViewHolder {
         val withDataBinding: DevbyteItemBinding = DataBindingUtil.inflate(
-                LayoutInflater.from(parent.context),
-                DevByteViewHolder.LAYOUT,
-                parent,
-                false)
+                LayoutInflater.from(parent.context), DevByteViewHolder.LAYOUT, parent, false)
         return DevByteViewHolder(withDataBinding)
     }
 
@@ -213,8 +207,7 @@ class DevByteAdapter(val callback: VideoClick) : RecyclerView.Adapter<DevByteVie
 /**
  * ViewHolder for DevByte items. All work is done by data binding.
  */
-class DevByteViewHolder(val viewDataBinding: DevbyteItemBinding) :
-        RecyclerView.ViewHolder(viewDataBinding.root) {
+class DevByteViewHolder(val viewDataBinding: DevbyteItemBinding) : RecyclerView.ViewHolder(viewDataBinding.root) {
     companion object {
         @LayoutRes
         val LAYOUT = R.layout.devbyte_item
