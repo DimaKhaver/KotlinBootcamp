@@ -42,7 +42,7 @@ object DevByteNetwork {
     // Configure retrofit to parse JSON and use coroutines
     private val retrofit = Retrofit.Builder()
             .baseUrl("https://android-kotlin-fun-mars-server.appspot.com/")
-            .addConverterFactory(MoshiConverterFactory.create()) // TODO: looks like there's a problem with this converting
+            .addConverterFactory(MoshiConverterFactory.create())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
 

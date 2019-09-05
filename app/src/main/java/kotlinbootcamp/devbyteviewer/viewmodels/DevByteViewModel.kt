@@ -23,9 +23,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import kotlinbootcamp.devbyteviewer.database.getDatabase
-import kotlinbootcamp.devbyteviewer.domain.DevByteVideo
-import kotlinbootcamp.devbyteviewer.network.DevByteNetwork
-import kotlinbootcamp.devbyteviewer.network.asDomainModel
 import kotlinbootcamp.devbyteviewer.repository.VideosRepository
 import kotlinx.coroutines.*
 import java.io.IOException
@@ -42,10 +39,16 @@ import java.io.IOException
  */
 class DevByteViewModel(application: Application) : AndroidViewModel(application) {
 
+
+    /**
+     * The data source this ViewModel will fetch results from.
+     */
     private val videosRepository = VideosRepository(getDatabase(application))
 
+    /**
+     * A playlist of videos displayed on the screen.
+     */
     val playlist = videosRepository.videos
-
 
     /**
      * This is the job for all coroutines started by this ViewModel.
@@ -61,7 +64,6 @@ class DevByteViewModel(application: Application) : AndroidViewModel(application)
      * viewModelJob.cancel()
      */
     private val viewModelScope = CoroutineScope(viewModelJob + Dispatchers.Main)
-
 
     /**
      * Event triggered for network error. This is private to avoid exposing a
@@ -97,20 +99,9 @@ class DevByteViewModel(application: Application) : AndroidViewModel(application)
     }
 
     /**
-     * Refresh data from network and pass it via LiveData. Use a coroutine launch to get to
+     * Refresh data from the repository. Use a coroutine launch to run in a
      * background thread.
      */
-    private fun refreshDataFromNetwork() = viewModelScope.launch {
-        try {
-            _eventNetworkError.value = false
-            _isNetworkErrorShown.value = false
-
-        } catch (networkError: IOException) {
-            // Show a Toast error message and hide the progress bar.
-            _eventNetworkError.value = true
-        }
-    }
-
     private fun refreshDataFromRepository() {
         viewModelScope.launch {
             try {
@@ -125,6 +116,7 @@ class DevByteViewModel(application: Application) : AndroidViewModel(application)
             }
         }
     }
+
 
     /**
      * Resets the network error flag.
