@@ -16,8 +16,8 @@ class MainAdapter(private val taskArray: Array<String>, private val clickListene
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v =  LayoutInflater.from(parent.context).inflate(R.layout.main_list_of_tasks, parent, false)
-        return ViewHolder(v)
+        val inflater =  LayoutInflater.from(parent.context).inflate(R.layout.main_list_of_tasks, parent, false)
+        return ViewHolder(inflater)
     }
 
     override fun getItemCount(): Int {

@@ -11,6 +11,7 @@ import kotlinbootcamp.basicappanatomy.BasicAppAnatomyActivity
 import kotlinbootcamp.constraintlayout.ColorMyViewsActivity
 import kotlinbootcamp.coroutinesandroom.SleepActivity
 import kotlinbootcamp.databinding.BindDataActivity
+import kotlinbootcamp.devbyteviewer.ui.DevByteActivity
 import kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity
 import kotlinbootcamp.lifecycleandlogging.ClickerActivity
 import kotlinbootcamp.marsrealestate.MarsActivity
@@ -26,7 +27,8 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
     private lateinit var rvLayoutManager: LinearLayoutManager
     private val namesInList: Array<String> =
         arrayOf("basic app anatomy", "image rsc & compatibility", "color my views", "data binding",
-            "navigation paths", "clicker app", "vm & vm factory", "coroutines basics", "mars real estate" )
+            "navigation paths", "clicker app", "vm & vm factory", "coroutines basics", "mars real estate",
+            "dev byte viewer")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +62,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
             this.namesInList[6] -> startNewActivity(this, GuessTheWordActivity::class.java)
             this.namesInList[7] -> startNewActivity(this, SleepActivity::class.java)
             this.namesInList[8] -> startNewActivity(this, MarsActivity::class.java)
+            this.namesInList[9] -> startNewActivity(this, DevByteActivity::class.java)
         }
     }
 }
