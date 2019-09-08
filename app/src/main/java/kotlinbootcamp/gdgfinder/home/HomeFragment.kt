@@ -23,7 +23,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.kotlinbootcamp.R
 import com.kotlinbootcamp.databinding.GdgHomeFragmentBinding
 
 class HomeFragment : Fragment() {
@@ -38,8 +37,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val inflateFragment = inflater.inflate(R.layout.gdg_home_fragment, container, false)
-        val binding = GdgHomeFragmentBinding.inflate(inflateFragment)
+        val binding = GdgHomeFragmentBinding.inflate(inflater)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
 
         return binding.root
