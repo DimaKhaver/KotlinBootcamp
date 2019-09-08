@@ -12,6 +12,7 @@ import kotlinbootcamp.constraintlayout.ColorMyViewsActivity
 import kotlinbootcamp.coroutinesandroom.SleepActivity
 import kotlinbootcamp.databinding.BindDataActivity
 import kotlinbootcamp.devbyteviewer.ui.DevByteActivity
+import kotlinbootcamp.gdgfinder.GdgMainActivity
 import kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity
 import kotlinbootcamp.lifecycleandlogging.ClickerActivity
 import kotlinbootcamp.marsrealestate.MarsActivity
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
     private val namesInList: Array<String> =
         arrayOf("basic app anatomy", "image rsc & compatibility", "color my views", "data binding",
             "navigation paths", "clicker app", "vm & vm factory", "coroutines basics", "mars real estate",
-            "dev byte viewer")
+            "dev byte viewer", "gdg finder")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.ClickListener {
             this.namesInList[7] -> startNewActivity(this, SleepActivity::class.java)
             this.namesInList[8] -> startNewActivity(this, MarsActivity::class.java)
             this.namesInList[9] -> startNewActivity(this, DevByteActivity::class.java)
+            this.namesInList[10] -> startNewActivity(this, GdgMainActivity::class.java)
         }
     }
 }

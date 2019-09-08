@@ -32,8 +32,11 @@
         <activity android:name="kotlinbootcamp.coroutinesandroom.SleepActivity"/>
         <activity android:name="kotlinbootcamp.marsrealestate.MarsActivity"/>
         <activity android:name="kotlinbootcamp.devbyteviewer.ui.DevByteActivity"/>
+        <activity android:name="kotlinbootcamp.gdgfinder.GdgMainActivity"/>
 
-        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 

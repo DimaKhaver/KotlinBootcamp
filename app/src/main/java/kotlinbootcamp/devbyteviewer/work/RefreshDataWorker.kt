@@ -11,7 +11,7 @@ import timber.log.Timber
 class RefreshDataWorker(appContext: Context, params: WorkerParameters): CoroutineWorker(appContext, params) {
 
     companion object {
-        const val WORK_NAME = "kotlinbootcamp.devbyteviewer.work.RefreshDataWorker"
+            const val WORK_NAME = "kotlinbootcamp.devbyteviewer.work.RefreshDataWorker"
     }
 
     override suspend fun doWork(): Result {

@@ -37,6 +37,10 @@ android {
         enabled = true
     }
 
+    androidExtensions {
+        experimental = true
+    }
+
 }
 
 dependencies {
@@ -100,4 +104,10 @@ dependencies {
     implementation "androidx.work:work-runtime-ktx:$work_version"
 
     implementation 'com.android.support:multidex:1.0.3'
+
+    // material design components
+    implementation 'com.google.android.material:material:1.1.0-alpha10'
+
+    // Client for retrieving location
+    implementation "com.google.android.gms:play-services-location:17.0.0"
 }
