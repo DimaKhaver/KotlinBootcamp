@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/sleep_tracker_fragment"
-        android:name="kotlinbootcamp.coroutinesandroom.sleeptracker.SleepTrackerFragment"
+        android:name="codelabs.kotlinfundamentals.coroutinesandroom.sleeptracker.SleepTrackerFragment"
         android:label="@string/sleep_tracker_fragment">
         <action
             android:id="@+id/action_sleepTrackerFragment_to_sleepQualityFragment"
@@ -22,7 +22,7 @@
 
     <fragment
             android:id="@+id/sleep_quality_fragment"
-            android:name="kotlinbootcamp.coroutinesandroom.sleepquality.SleepQualityFragment"
+            android:name="codelabs.kotlinfundamentals.coroutinesandroom.sleepquality.SleepQualityFragment"
             android:label="@string/sleep_quality_fragment"
             tools:layout="@layout/fragment_sleep_quality_new">
         <argument
@@ -38,7 +38,7 @@
 
     <fragment
             android:id="@+id/sleep_detail_fragment"
-            android:name="kotlinbootcamp.coroutinesandroom.sleepdetail.SleepDetailFragment"
+            android:name="codelabs.kotlinfundamentals.coroutinesandroom.sleepdetail.SleepDetailFragment"
             android:label="@string/sleep_detail_fragment"
             tools:layout="@layout/fragment_sleep_detail" >
         <argument

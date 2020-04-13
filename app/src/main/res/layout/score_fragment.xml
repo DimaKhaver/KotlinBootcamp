@@ -7,14 +7,14 @@
     <data>
         <variable
                 name="scoreViewModel"
-                type="kotlinbootcamp.viewmodelandviewmodelfactory.score.ScoreViewModel"/>
+                type="codelabs.kotlinfundamentals.viewmodelandviewmodelfactory.score.ScoreViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/score_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="kotlinbootcamp.viewmodelandviewmodelfactory.score.ScoreFragment">
+        tools:context="codelabs.kotlinfundamentals.viewmodelandviewmodelfactory.score.ScoreFragment">
 
         <TextView
             android:id="@+id/you_scored_text"

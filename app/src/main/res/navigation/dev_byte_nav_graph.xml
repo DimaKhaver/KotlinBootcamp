@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/devByte"
-        android:name="kotlinbootcamp.devbyteviewer.ui.DevByteFragment"
+        android:name="codelabs.kotlinfundamentals.devbyteviewer.ui.DevByteFragment"
         android:label="fragment_dev_byte"
         tools:layout="@layout/fragment_dev_byte" />
 </navigation>

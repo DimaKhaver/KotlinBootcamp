@@ -22,7 +22,7 @@
 
         <variable
             name="viewModel"
-            type="kotlinbootcamp.gdgfinder.search.GdgListViewModel" />
+            type="codelabs.kotlinfundamentals.gdgfinder.search.GdgListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

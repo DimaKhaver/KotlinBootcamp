@@ -23,11 +23,11 @@
 
         <variable
             name="chapter"
-            type="kotlinbootcamp.gdgfinder.network.GdgChapter" />
+            type="codelabs.kotlinfundamentals.gdgfinder.network.GdgChapter" />
 
         <variable
             name="clickListener"
-            type="kotlinbootcamp.gdgfinder.search.GdgClickListener" />
+            type="codelabs.kotlinfundamentals.gdgfinder.search.GdgClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

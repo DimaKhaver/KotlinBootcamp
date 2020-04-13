@@ -22,7 +22,7 @@
     <data>
         <variable
             name="game"
-            type="kotlinbootcamp.navigationpaths.GameFragment" />
+            type="codelabs.kotlinfundamentals.navigationpaths.GameFragment" />
     </data>
 
     <ScrollView

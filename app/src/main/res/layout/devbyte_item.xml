@@ -24,11 +24,11 @@
 
         <variable
             name="video"
-            type="kotlinbootcamp.devbyteviewer.domain.DevByteVideo" />
+            type="codelabs.kotlinfundamentals.devbyteviewer.domain.DevByteVideo" />
 
         <variable
             name="videoCallback"
-            type="kotlinbootcamp.devbyteviewer.ui.VideoClick" />
+            type="codelabs.kotlinfundamentals.devbyteviewer.ui.VideoClick" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

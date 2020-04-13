@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        tools:context="kotlinbootcamp.mainscreen.MainActivity" >
+        tools:context="codelabs.kotlinfundamentals.mainscreen.MainActivity" >
 
     <TextView
             android:id="@+id/roll_text"

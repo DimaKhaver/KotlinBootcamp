@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-            android:name="kotlinbootcamp.MainApplication"
+            android:name="codelabs.MainApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -14,7 +14,7 @@
             android:theme="@style/AppTheme"
             tools:ignore="AllowBackup">
 
-        <activity android:name="kotlinbootcamp.mainscreen.MainActivity">
+        <activity android:name="codelabs.kotlinfundamentals.mainscreen.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.action.VIEW" />
@@ -22,17 +22,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="kotlinbootcamp.basicappanatomy.BasicAppAnatomyActivity"/>
-        <activity android:name="kotlinbootcamp.imagerscsandcompatibility.ImageResourcesActivity"/>
-        <activity android:name="kotlinbootcamp.constraintlayout.ColorMyViewsActivity"/>
-        <activity android:name="kotlinbootcamp.databinding.BindDataActivity"/>
-        <activity android:name="kotlinbootcamp.navigationpaths.NavigationMainActivity"/>
-        <activity android:name="kotlinbootcamp.lifecycleandlogging.ClickerActivity"/>
-        <activity android:name="kotlinbootcamp.viewmodelandviewmodelfactory.GuessTheWordActivity"/>
-        <activity android:name="kotlinbootcamp.coroutinesandroom.SleepActivity"/>
-        <activity android:name="kotlinbootcamp.marsrealestate.MarsActivity"/>
-        <activity android:name="kotlinbootcamp.devbyteviewer.ui.DevByteActivity"/>
-        <activity android:name="kotlinbootcamp.gdgfinder.GdgMainActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.basicappanatomy.BasicAppAnatomyActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.imagerscsandcompatibility.ImageResourcesActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.constraintlayout.ColorMyViewsActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.databinding.BindDataActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.navigationpaths.NavigationMainActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.lifecycleandlogging.ClickerActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.viewmodelandviewmodelfactory.GuessTheWordActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.coroutinesandroom.SleepActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.marsrealestate.MarsActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.devbyteviewer.ui.DevByteActivity"/>
+        <activity android:name="codelabs.kotlinfundamentals.gdgfinder.GdgMainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"

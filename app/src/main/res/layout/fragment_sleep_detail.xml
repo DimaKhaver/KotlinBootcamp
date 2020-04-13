@@ -24,7 +24,7 @@
     <data>
         <variable
                 name="sleepDetailViewModel"
-                type="kotlinbootcamp.coroutinesandroom.sleepdetail.SleepDetailViewModel" />
+                type="codelabs.kotlinfundamentals.coroutinesandroom.sleepdetail.SleepDetailViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

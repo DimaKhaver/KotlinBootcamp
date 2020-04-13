@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/overviewFragment"
-        android:name="kotlinbootcamp.marsrealestate.overview.OverviewFragment"
+        android:name="codelabs.kotlinfundamentals.marsrealestate.overview.OverviewFragment"
         android:label="fragment_overview"
         tools:layout="@layout/mars_fragment_overview" >
         <action
@@ -35,13 +35,13 @@
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="kotlinbootcamp.marsrealestate.detail.DetailFragment"
+        android:name="codelabs.kotlinfundamentals.marsrealestate.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/mars_fragment_detail">
 
         <argument
             android:name="selectedProperty"
-            app:argType="kotlinbootcamp.marsrealestate.network.MarsProperty" />
+            app:argType="codelabs.kotlinfundamentals.marsrealestate.network.MarsProperty" />
 
     </fragment>
 

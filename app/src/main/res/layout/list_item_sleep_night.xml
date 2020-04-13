@@ -7,11 +7,11 @@
     <data>
         <variable
                 name="sleep"
-                type="kotlinbootcamp.coroutinesandroom.database.SleepNight"/>
+                type="codelabs.kotlinfundamentals.coroutinesandroom.database.SleepNight"/>
 
         <variable
                 name="clickListener"
-                type="kotlinbootcamp.coroutinesandroom.sleeptracker.SleepNightListener" />
+                type="codelabs.kotlinfundamentals.coroutinesandroom.sleeptracker.SleepNightListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

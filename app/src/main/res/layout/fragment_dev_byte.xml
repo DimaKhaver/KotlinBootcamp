@@ -23,7 +23,7 @@
     <data>
         <variable
             name="viewModel"
-            type="kotlinbootcamp.devbyteviewer.viewmodels.DevByteViewModel" />
+            type="codelabs.kotlinfundamentals.devbyteviewer.viewmodels.DevByteViewModel" />
     </data>
 
     <FrameLayout

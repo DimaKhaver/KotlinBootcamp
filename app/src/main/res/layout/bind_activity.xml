@@ -8,7 +8,7 @@
     <data>
         <variable
                 name="myName"
-                type="kotlinbootcamp.databinding.MyName" />
+                type="codelabs.kotlinfundamentals.databinding.MyName" />
     </data>
 
 

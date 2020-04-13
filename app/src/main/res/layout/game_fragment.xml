@@ -20,14 +20,14 @@
 
     <data>
         <variable name="gameViewModel"
-                  type="kotlinbootcamp.viewmodelandviewmodelfactory.game.GameViewModel"/>
+                  type="codelabs.kotlinfundamentals.viewmodelandviewmodelfactory.game.GameViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/game_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="kotlinbootcamp.viewmodelandviewmodelfactory.game.GameFragment">
+        tools:context="codelabs.kotlinfundamentals.viewmodelandviewmodelfactory.game.GameFragment">
 
         <TextView
             android:id="@+id/word_is_text"

@@ -24,7 +24,7 @@
     <data>
         <variable
             name="viewModel"
-            type="kotlinbootcamp.marsrealestate.overview.OverviewViewModel"/>
+            type="codelabs.kotlinfundamentals.marsrealestate.overview.OverviewViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

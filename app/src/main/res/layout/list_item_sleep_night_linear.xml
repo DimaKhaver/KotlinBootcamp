@@ -7,7 +7,7 @@
     <data>
         <variable
                 name="sleep"
-                type="kotlinbootcamp.coroutinesandroom.database.SleepNight"/>
+                type="codelabs.kotlinfundamentals.coroutinesandroom.database.SleepNight"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

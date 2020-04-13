@@ -24,7 +24,7 @@
     <data>
         <variable
             name="viewModel"
-            type="kotlinbootcamp.marsrealestate.detail.DetailViewModel" />
+            type="codelabs.kotlinfundamentals.marsrealestate.detail.DetailViewModel" />
     </data>
 
     <ScrollView

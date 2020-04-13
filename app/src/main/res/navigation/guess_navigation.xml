@@ -21,7 +21,7 @@
 
     <fragment
             android:id="@+id/title_destination"
-            android:name="kotlinbootcamp.viewmodelandviewmodelfactory.title.TitleFragment"
+            android:name="codelabs.kotlinfundamentals.viewmodelandviewmodelfactory.title.TitleFragment"
             android:label="title_fragment"
             tools:layout="@layout/title_fragment">
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
             android:id="@+id/game_destination"
-            android:name="kotlinbootcamp.viewmodelandviewmodelfactory.game.GameFragment"
+            android:name="codelabs.kotlinfundamentals.viewmodelandviewmodelfactory.game.GameFragment"
             android:label="game_fragment"
             tools:layout="@layout/game_fragment">
         <action
@@ -50,7 +50,7 @@
     </fragment>
     <fragment
             android:id="@+id/score_destination"
-            android:name="kotlinbootcamp.viewmodelandviewmodelfactory.score.ScoreFragment"
+            android:name="codelabs.kotlinfundamentals.viewmodelandviewmodelfactory.score.ScoreFragment"
             android:label="score_fragment"
             tools:layout="@layout/score_fragment">
         <action
